@@ -34,23 +34,35 @@ The package currently includes the following modules:
 
 To build and publish the package, follow these steps:
 
-1. Install build dependencies:
+1.  Install build dependencies:
 
-   ```bash
-   uv add build twine
-   ```
+    ```bash
+    uv add build twine
+    ```
 
-2. Build the package:
+2.  Build the package:
 
-   ```bash
-   uv build
-   ```
+    ```bash
+    uv build
+    ```
 
-3. Publish the package:
+3.  Publish the package
 
-   ```bash
-   uv run twine upload --verbose dist/*
-   ```
+    3.1. Publish the package to github:
+
+    Publishing to github is as simple as pushing it to github.
+
+    ```bash
+    git push
+    ```
+
+    3.2 Publish the package in PyPI:
+
+    ```bash
+    uv run twine upload --verbose dist/*
+    ```
+
+    NOTE: PyPI is public and should not be used for sensitive information. Also, you need to setup `~/.pypirc` with your PyPI credentials.
 
 ## Usage
 
