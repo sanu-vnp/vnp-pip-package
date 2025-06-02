@@ -3,8 +3,8 @@ build-backend = "hatchling.build"
 requires = [ "hatchling" ]
 
 [project]
-name = "vnp-integration"
-version = "0.1.0"
+name = "vnp"
+version = "0.1.2"
 description = "Standard PIP Package for VNP integration apps."
 readme = "README.md"
 license-files = [ "LICENSE" ]
@@ -34,3 +34,8 @@ dev = [
 
 [tool.hatch.build.targets.wheel]
 packages = [ "src/vnp" ]
+
+[tool.ruff]
+lint.ignore = [
+  "S608", # Possible SQL injection vector through string-based query construction
+]
