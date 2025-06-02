@@ -5,6 +5,37 @@ build/
 dist/
 wheels/
 *.egg-info
-
-# Virtual environments
+.ruff_cache
 .venv
+
+# Aider
+.aider*
+
+# Keys and Secrets
+*.pem
+*.key
+*.crt
+development_gcp_service_account_key.json
+id_rsa
+id_rsa.pub
+terraform_service_account_key.json
+*service_account*
+*credential*
+.env
+
+# Local Deployment Scripts
+*run-podman.sh
+*run-terraform.sh
+
+# Test Scripts and logs
+test-scripts
+logs/
+
+# Terraform
+.terraform
+.terraform.lock.hcl
+terraform.tfstate
+
+# Extras
+.DS_Store
+.aider*
