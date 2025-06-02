@@ -1,0 +1,31 @@
+[build-system]
+build-backend = "hatchling.build"
+requires = [ "hatchling" ]
+
+[project]
+name = "vnp-integration"
+version = "0.1.0"
+description = "Standard PIP Package for VNP integration apps."
+readme = "README.md"
+license-files = [ "LICENSE" ]
+authors = [
+  { name = "Sanu Maharjan", email = "sanu.maharjan@vnp.de" },
+]
+requires-python = ">=3.12"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
+dependencies = [
+  "google-cloud-bigquery>=3.34",
+  "google-cloud-secret-manager>=2.23.3",
+  "google-cloud-storage>=3.1",
+  "pandas>=2.2.3",
+  "pydantic>=2.11.5",
+]
+
+[dependency-groups]
+dev = [
+  "ruff>=0.11.12",
+]
